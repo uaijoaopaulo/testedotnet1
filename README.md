@@ -18,8 +18,9 @@ Desenvolver um serviço que seja capaz de gerar um lançamento de horas.
 #### Instruções:
 1. Realizar `fork` deste projeto.
 2. Desenvolver em cima do seu `fork`.
-3. Após finalizar, realizar o `pull request`.
-4. Fique à vontade para perguntar qualquer dúvida aos recrutadores.
+3. Atualizar esse README.md com sua identificação no fim do arquivo
+4. Após finalizar, realizar o `pull request`.
+5. Fique à vontade para perguntar qualquer dúvida aos recrutadores.
 
 #### E por fim:
 - Gostaríamos de ver o uso do controle de versão.
@@ -32,3 +33,7 @@ Desenvolver um serviço que seja capaz de gerar um lançamento de horas.
 #### Desejável (Será considerado um diferencial)
 - Configurar o Swagger para termos acesso a documentação da API.
 - Implementar autenticação JWT com expiração de 5 minutos
+
+#### Identificação:
+Nome: <br/>
+E-mail: 
