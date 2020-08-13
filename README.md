@@ -24,7 +24,7 @@ Desenvolver um serviço que seja capaz de gerar um lançamento de horas.
 
 #### E por fim:
 - Gostaríamos de ver o uso do controle de versão.
-- Entendimento de design patterns, OO, conceitos de SOLID, e outros relacionados
+- Entendimento de OO, conceitos de SOLID, e outros relacionados
 - Reuso do código
 - Vamos avaliar a maneira que você escreveu seu código, a solução apresentada.
 - Caso encontre algum impedimento no decorrer do desenvolvimento, entregue da maneira que preferir e faça uma explicação sobre o impedimento.
