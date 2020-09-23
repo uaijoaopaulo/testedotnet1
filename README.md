@@ -33,6 +33,7 @@ Desenvolver um serviço que seja capaz de gerar um lançamento de horas.
 #### Desejável (Será considerado um diferencial)
 - Configurar o Swagger para termos acesso a documentação da API.
 - Implementar autenticação JWT com expiração de 5 minutos
+- Criar um client WEB para consumir essa API 
 
 #### Identificação:
 Nome: <br/>
