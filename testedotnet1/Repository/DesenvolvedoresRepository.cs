@@ -21,7 +21,7 @@ namespace testedotnet1.Repository
                 throw;
             }
         }
-        public List<Desenvolvedor> GetAll()
+        public List<Desenvolvedor> GetDevs()
         {
             try
             {

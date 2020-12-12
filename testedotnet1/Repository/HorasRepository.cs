@@ -9,6 +9,18 @@ namespace testedotnet1.Repository
 {
     public class HorasRepository : BaseRepository
     {
+        public List<Hora_trabalhada> GetRegistros()
+        {
+            try
+            {
+                return DataModel.Horas_Trabalhadas.ToList();
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+        }
         public Hora_trabalhada GetRegistro(int value)
         {
             try
@@ -38,25 +50,8 @@ namespace testedotnet1.Repository
         {
             try
             {
-                return DataModel.Horas_Trabalhadas.Where(e => e.Datainicio.Month == value.Month && e.Datainicio.Year == value.Year).ToList();
-            }
-            catch (Exception)
-            {
-                return null;
-                throw;
-            }
-        }
-
-        public List<Hora_trabalhada> GetRankingMonth(DateTime value)
-        {
-            try
-            {
-                var registros = GetRegistrosMonth(value);
-                foreach (var registro in registros)
-                {
-                    registro.Datainicio.Subtract(registro.Datafim);
-                }
-                return null;
+                return DataModel.Horas_Trabalhadas.Where(e => e.Datainicio.Month == value.Month 
+                && e.Datainicio.Year == value.Year).ToList();
             }
             catch (Exception)
             {
@@ -67,6 +62,19 @@ namespace testedotnet1.Repository
 
         public async Task SalvarRegistroAsync(Hora_trabalhada value)
         {
+            var HorasConflitantes = DataModel.Horas_Trabalhadas.Where
+                (e => e.desenvolvedor.Id.Equals(value.desenvolvedor.Id) 
+            && e.Datainicio.Year.Equals(value.Datainicio.Year)
+            && e.Datainicio.Month.Equals(value.Datainicio.Month) 
+            && e.Datainicio.Day.Equals(value.Datainicio.Day)).ToList();
+            if(HorasConflitantes != null)
+                foreach (var Hora in HorasConflitantes)
+                {
+                    if (Hora.Datainicio.Hour >= value.Datainicio.Hour
+                    && Hora.Datafim.Hour <= value.Datafim.Hour)
+                    return;
+                }
+
             DataModel.Entry(value).State = value.Id == 0 ?
                 EntityState.Added : EntityState.Modified;
             await DataModel.SaveChangesAsync();

@@ -32,8 +32,16 @@ namespace testedotnet1.Models
                 return _HD;
             }
         }
-
-        public List<RankingDesenvolvedores> GetRankingMonth(DateTime value)
+        
+        public List<RankingDesenvolvedores> GetRanking()
+        {
+            return GeraRanking(HR.GetRegistros());
+        }
+        public List<RankingDesenvolvedores> GetRanking(DateTime value)
+        {
+            return GeraRanking(HR.GetRegistrosMonth(value));
+        }
+        public List<RankingDesenvolvedores> GetListaDevs()
         {
             var ListaDev = new List<RankingDesenvolvedores>();
             foreach (var desenvolvedor in HD.GetAll())
@@ -46,11 +54,15 @@ namespace testedotnet1.Models
                 };
                 ListaDev.Add(DevRank);
             }
+            return ListaDev;
+        }
+        public List<RankingDesenvolvedores> GeraRanking(List<Hora_trabalhada> ListaHoras)
+        {
+            var ListaDev = GetListaDevs();
 
             try
             {
-                var registros = HR.GetRegistrosMonth(value);
-                foreach (var registro in registros)
+                foreach (var registro in ListaHoras)
                 {
                     var horas = registro.Datainicio.Subtract(registro.Datafim);
                     ListaDev.First(e => e.Id == registro.desenvolvedor.Id).HorasTrabalhadas += horas.TotalHours;
@@ -63,7 +75,6 @@ namespace testedotnet1.Models
                 throw;
             }
         }
-
-
+        
     }
 }

@@ -33,7 +33,7 @@ namespace testedotnet1.Controllers
             //};
             //await HD.SalvarDevAsync(dev);
 
-            var dev = HD.GetAll();
+            var dev = HD.GetDevs();
             if (dev == null)
                 return NotFound();
             return Ok(dev);
