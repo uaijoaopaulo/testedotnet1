@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using testedotnet1.WebAPI.Horas;
+using testedotnet1.Repository;
 
 namespace testedotnet1.Controllers
 {

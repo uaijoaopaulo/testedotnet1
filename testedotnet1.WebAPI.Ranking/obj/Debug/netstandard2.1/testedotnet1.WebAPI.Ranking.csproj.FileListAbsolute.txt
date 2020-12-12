@@ -1,0 +1,16 @@
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Ranking.deps.json
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Ranking.dll
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Ranking.pdb
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.dll
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Horas.dll
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Model.dll
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.pdb
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Horas.pdb
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Model.pdb
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Ranking.csprojAssemblyReference.cache
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Ranking.AssemblyInfoInputs.cache
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Ranking.AssemblyInfo.cs
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Ranking.csproj.CoreCompileInputs.cache
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Ranking.csproj.CopyComplete
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Ranking.dll
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Ranking.pdb

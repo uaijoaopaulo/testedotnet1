@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace testedotnet1.WebAPI.Model.Migrations
+namespace testedotnet1.Migrations
 {
     public partial class initial : Migration
     {

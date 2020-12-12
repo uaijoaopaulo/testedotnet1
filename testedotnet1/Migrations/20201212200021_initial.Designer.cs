@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using testedotnet1.WebAPI.Model.App_Data;
+using testedotnet1.Data;
 
-namespace testedotnet1.WebAPI.Model.Migrations
+namespace testedotnet1.Migrations
 {
-    [DbContext(typeof(HorasContext))]
-    partial class HorasContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(RegistroContext))]
+    [Migration("20201212200021_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -19,7 +21,7 @@ namespace testedotnet1.WebAPI.Model.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
-            modelBuilder.Entity("testedotnet1.WebAPI.Model.App_Data.Desenvolvedor", b =>
+            modelBuilder.Entity("testedotnet1.Models.Desenvolvedor", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,7 +36,7 @@ namespace testedotnet1.WebAPI.Model.Migrations
                     b.ToTable("Desenvolvedores");
                 });
 
-            modelBuilder.Entity("testedotnet1.WebAPI.Model.App_Data.Hora_trabalhada", b =>
+            modelBuilder.Entity("testedotnet1.Models.Hora_trabalhada", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -57,9 +59,9 @@ namespace testedotnet1.WebAPI.Model.Migrations
                     b.ToTable("Horas_Trabalhadas");
                 });
 
-            modelBuilder.Entity("testedotnet1.WebAPI.Model.App_Data.Hora_trabalhada", b =>
+            modelBuilder.Entity("testedotnet1.Models.Hora_trabalhada", b =>
                 {
-                    b.HasOne("testedotnet1.WebAPI.Model.App_Data.Desenvolvedor", "desenvolvedor")
+                    b.HasOne("testedotnet1.Models.Desenvolvedor", "desenvolvedor")
                         .WithMany()
                         .HasForeignKey("desenvolvedorId");
 

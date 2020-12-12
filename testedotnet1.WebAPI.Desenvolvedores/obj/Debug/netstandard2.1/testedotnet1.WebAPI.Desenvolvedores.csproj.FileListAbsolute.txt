@@ -1,0 +1,12 @@
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.deps.json
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.dll
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.pdb
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Model.dll
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\bin\Debug\netstandard2.1\testedotnet1.WebAPI.Model.pdb
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.csprojAssemblyReference.cache
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.AssemblyInfoInputs.cache
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.AssemblyInfo.cs
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.csproj.CoreCompileInputs.cache
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.csproj.CopyComplete
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.dll
+C:\Users\Joao Paulo Braulio\source\repos\github\testedotnet1\testedotnet1.WebAPI.Desenvolvedores\obj\Debug\netstandard2.1\testedotnet1.WebAPI.Desenvolvedores.pdb

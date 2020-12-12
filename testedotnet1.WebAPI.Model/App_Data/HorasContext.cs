@@ -12,7 +12,7 @@ namespace testedotnet1.WebAPI.Model.App_Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TESTEDOTNET1;Data Source=DESKTOP-11Q5IUF\MSSQLSERVER2");
+            optionsBuilder.UseSqlServer(@"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TESTEDOTNET1;Data Source=DESKTOP-11Q5IUF\MSSQLSERVER2");
         }
     }
 }

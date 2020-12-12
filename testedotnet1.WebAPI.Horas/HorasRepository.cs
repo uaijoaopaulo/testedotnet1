@@ -65,24 +65,6 @@ namespace testedotnet1.WebAPI.Horas
             }
         }
 
-        //// Retorna todos os filme na locadora
-        //public List<tb_FilmeCF> GetTodosFilmes()
-        //{
-        //    return DataModel.Filmes.ToList();
-        //}
-
-        //// Retorna todos os filmes ativos ou desativos na locadora
-        //public List<tb_FilmeCF> GetTodosFilmes(bool value)
-        //{
-        //    return DataModel.Filmes.Where(e => e.filmeAtivo == value).ToList();
-        //}
-
-        //// Retorna todos os filmes pelo nome ou que contenham o nome
-        //public List<tb_FilmeCF> GetTodosFilmes(string value)
-        //{
-        //    return DataModel.Filmes.Where(e => e.nomeFilme == value || e.nomeFilme.Contains(value)).ToList();
-        //}
-
         public async Task SalvarRegistroAsync(Hora_trabalhada value)
         {
             DataModel.Entry(value).State = value.Id == 0 ?
