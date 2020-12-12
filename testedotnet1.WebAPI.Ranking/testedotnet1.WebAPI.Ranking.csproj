@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\testedotnet1.WebAPI.Desenvolvedores\testedotnet1.WebAPI.Desenvolvedores.csproj" />
+    <ProjectReference Include="..\testedotnet1.WebAPI.Horas\testedotnet1.WebAPI.Horas.csproj" />
+  </ItemGroup>
+
+</Project>

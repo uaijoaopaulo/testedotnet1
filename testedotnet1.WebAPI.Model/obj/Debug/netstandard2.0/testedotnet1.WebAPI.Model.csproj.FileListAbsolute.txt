@@ -1,0 +1,5 @@
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Model\bin\Debug\netstandard2.0\testedotnet1.WebAPI.Model.deps.json
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Model\bin\Debug\netstandard2.0\testedotnet1.WebAPI.Model.dll
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Model\obj\Debug\netstandard2.0\testedotnet1.WebAPI.Model.csprojAssemblyReference.cache
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Model\obj\Debug\netstandard2.0\testedotnet1.WebAPI.Model.AssemblyInfoInputs.cache
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Model\obj\Debug\netstandard2.0\testedotnet1.WebAPI.Model.AssemblyInfo.cs

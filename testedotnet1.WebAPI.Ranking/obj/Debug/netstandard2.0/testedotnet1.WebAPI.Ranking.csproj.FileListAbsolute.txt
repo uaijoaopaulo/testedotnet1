@@ -1,0 +1,8 @@
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.0\testedotnet1.WebAPI.Ranking.deps.json
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.0\testedotnet1.WebAPI.Ranking.dll
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Ranking\bin\Debug\netstandard2.0\testedotnet1.WebAPI.Ranking.pdb
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.0\testedotnet1.WebAPI.Ranking.AssemblyInfoInputs.cache
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.0\testedotnet1.WebAPI.Ranking.AssemblyInfo.cs
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.0\testedotnet1.WebAPI.Ranking.csproj.CoreCompileInputs.cache
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.0\testedotnet1.WebAPI.Ranking.dll
+C:\Users\Joao Paulo Braulio\source\repos\testedotnet1\testedotnet1.WebAPI.Ranking\obj\Debug\netstandard2.0\testedotnet1.WebAPI.Ranking.pdb
