@@ -9,6 +9,7 @@ namespace testedotnet1.Models
         public int Id { get; set; }
         public DateTime Datainicio { get; set; }
         public DateTime Datafim { get; set; }
+        //public int desenvolvedorId { get; set; }
         public Desenvolvedor desenvolvedor { get; set; }
     }
 }

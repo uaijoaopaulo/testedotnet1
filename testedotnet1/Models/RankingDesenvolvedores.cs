@@ -44,7 +44,7 @@ namespace testedotnet1.Models
         public List<RankingDesenvolvedores> GetListaDevs()
         {
             var ListaDev = new List<RankingDesenvolvedores>();
-            foreach (var desenvolvedor in HD.GetAll())
+            foreach (var desenvolvedor in HD.GetDevs())
             {
                 var DevRank = new RankingDesenvolvedores
                 {
@@ -65,9 +65,9 @@ namespace testedotnet1.Models
                 foreach (var registro in ListaHoras)
                 {
                     var horas = registro.Datainicio.Subtract(registro.Datafim);
-                    ListaDev.First(e => e.Id == registro.desenvolvedor.Id).HorasTrabalhadas += horas.TotalHours;
+                    ListaDev[registro.desenvolvedor.Id].HorasTrabalhadas += horas.TotalHours;
                 }
-                return ListaDev;
+                return ListaDev.Take(5).ToList();
             }
             catch (Exception)
             {

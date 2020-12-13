@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using testedotnet1.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace testedotnet1.Repository
 {
@@ -34,18 +35,38 @@ namespace testedotnet1.Repository
             }
         }
 
-        public async Task SalvarDevAsync(Desenvolvedor value)
+        public async Task<Desenvolvedor> SalvarDevAsync(Desenvolvedor value)
         {
-            DataModel.Entry(value).State = value.Id == 0 ?
-                EntityState.Added : EntityState.Modified;
-            await DataModel.SaveChangesAsync();
+            try
+            {
+                DataModel.Entry(value).State = value.Id == 0 ? 
+                    EntityState.Added : EntityState.Modified;
+                await DataModel.SaveChangesAsync();
+                return value;
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+            
         }
 
-        public async Task ExcluirDevAsync(int value)
+        public async Task<int?> ExcluirDevAsync(int value)
         {
-            var dev = GetDev(value);
-            DataModel.Desenvolvedores.Remove(dev);
-            await DataModel.SaveChangesAsync();
+            try
+            {
+                var dev = GetDev(value);
+                DataModel.Desenvolvedores.Remove(dev);
+                await DataModel.SaveChangesAsync();
+                return value;
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+            
         }
     }
 }

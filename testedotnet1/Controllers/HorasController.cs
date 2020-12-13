@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using testedotnet1.Models;
 using testedotnet1.Repository;
 
 namespace testedotnet1.Controllers
@@ -22,6 +23,15 @@ namespace testedotnet1.Controllers
             }
         }
 
+        [HttpGet]
+        public IActionResult HorasRegistradas()
+        {
+            var hora = HR.GetRegistros();
+            if (hora == null)
+                return NotFound();
+            return Ok(hora);
+        }
+
         [HttpGet("{id}")]
         public IActionResult HoraRegistrada(int id)
         {
@@ -30,6 +40,28 @@ namespace testedotnet1.Controllers
                 return NotFound();
             return Ok(hora);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateHoraAsync(/*[FromBody] Hora_trabalhada value*/)
+        {
+            var hora = 0;
+            if (hora == null)
+                return BadRequest();
+            return Ok(hora);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> AtualizarHora([FromBody] Hora_trabalhada value)
+        {
+            return null;
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> ExcluirHora([FromBody] Hora_trabalhada value)
+        {
+            return null;
+        }
+
 
         //[HttpGet]
         //public IActionResult ListaDeLivros()

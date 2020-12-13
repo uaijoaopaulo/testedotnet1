@@ -60,7 +60,7 @@ namespace testedotnet1.Repository
             }
         }
 
-        public async Task SalvarRegistroAsync(Hora_trabalhada value)
+        public async Task<Hora_trabalhada> SalvarRegistroAsync(Hora_trabalhada value)
         {
             var HorasConflitantes = DataModel.Horas_Trabalhadas.Where
                 (e => e.desenvolvedor.Id.Equals(value.desenvolvedor.Id) 
@@ -72,19 +72,39 @@ namespace testedotnet1.Repository
                 {
                     if (Hora.Datainicio.Hour >= value.Datainicio.Hour
                     && Hora.Datafim.Hour <= value.Datafim.Hour)
-                    return;
+                    return null;
                 }
+            try
+            {
+                DataModel.Entry(value).State = value.Id == 0 ?
+                    EntityState.Added : EntityState.Modified;
+                await DataModel.SaveChangesAsync();
 
-            DataModel.Entry(value).State = value.Id == 0 ?
-                EntityState.Added : EntityState.Modified;
-            await DataModel.SaveChangesAsync();
+                return value;
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+            
         }
 
-        public async Task ExcluirRegistroAsync(int value)
+        public async Task<int?> ExcluirRegistroAsync(int value)
         {
-            var registro = GetRegistro(value);
-            DataModel.Horas_Trabalhadas.Remove(registro);
-            await DataModel.SaveChangesAsync();
+            try
+            {
+                var registro = GetRegistro(value);
+                DataModel.Horas_Trabalhadas.Remove(registro);
+                await DataModel.SaveChangesAsync();
+                return value;
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+            
         }
     }
 }
