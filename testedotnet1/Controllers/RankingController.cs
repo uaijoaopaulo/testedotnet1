@@ -31,7 +31,7 @@ namespace testedotnet1.Controllers
             return Ok(Ranking);
         }
 
-        [HttpGet("date")]
+        [HttpGet("{date}")] //2020-05-02 test filtra por mes
         public IActionResult GetRanking(DateTime date)
         {
             var Ranking = RD.GetRanking(date);

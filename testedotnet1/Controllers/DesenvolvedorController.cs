@@ -24,7 +24,7 @@ namespace testedotnet1.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetDevAsync()
+        public IActionResult GetDev()
         {
             var dev = DR.GetDevs();
             if (dev == null)
@@ -35,12 +35,7 @@ namespace testedotnet1.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateDevAsync([FromBody] Desenvolvedor value)
         {
-            var dev = new Desenvolvedor
-            {
-                Nome = "João",
-
-            };
-            dev = await DR.SalvarDevAsync(dev);
+            var dev = await DR.SalvarDevAsync(value);
             if (dev == null)
                 return BadRequest();
             return Ok(dev);
@@ -56,9 +51,9 @@ namespace testedotnet1.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> ExcluirDev(/*[FromBody] Desenvolvedor value*/)
+        public async Task<IActionResult> ExcluirDev([FromBody] Desenvolvedor value)
         {
-            var dev = await DR.ExcluirDevAsync(1/*value.Id*/);
+            var dev = await DR.ExcluirDevAsync(value.Id);
             if (dev == null)
                 return BadRequest();
             return Ok(dev);
@@ -69,37 +64,34 @@ namespace testedotnet1.Controllers
 
 
 
+        //Criação de registros de horas trabalhadas aleatorios
 
-        private HorasRepository _HR;
-        public HorasRepository HR
-        {
-            get
-            {
-                if (_HR == null)
-                    _HR = new HorasRepository();
-                return _HR;
-            }
-        }
-        public async Task CriaHoras()
-        {
-            var devs = DR.GetDevs();
-            Random rnd = new Random();
+        //private HorasRepository _HR;
+        //public HorasRepository HR
+        //{
+        //    get
+        //    {
+        //        if (_HR == null)
+        //            _HR = new HorasRepository();
+        //        return _HR;
+        //    }
+        //}
+        //public async Task CriaHoras()
+        //{
+        //    var devs = DR.GetDevs();
+        //    Random rnd = new Random();
+        //    for (int i = 0; i <= 1500; i++)
+        //    {
+        //        string iString = "2020-" + rnd.Next(1, 12).ToString("00") + "-" + rnd.Next(1, 30).ToString("00") + " " + rnd.Next(7, 12).ToString("00") + ":" + rnd.Next(0, 59).ToString("00") + ":" + rnd.Next(0, 24).ToString("00"); // "2005-05-05 22:12 PM";
+        //        DateTime oDate = DateTime.ParseExact(iString, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
 
-            for (int i = 0; i <= 1442; i++)
-            {
-                string iString = "2020-" + rnd.Next(1, 12).ToString("00") + "-" + rnd.Next(1, 30).ToString("00") + " " + rnd.Next(7, 12).ToString("00") + ":" + rnd.Next(0, 59).ToString("00") + ":" + rnd.Next(0, 24).ToString("00"); // "2005-05-05 22:12 PM";
-                DateTime oDate = DateTime.ParseExact(iString, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+        //        var hora = new Hora_trabalhada();
+        //        hora.Datainicio = oDate;
+        //        hora.Datafim = oDate.AddHours(rnd.Next(5, 8)).AddMinutes(rnd.Next(10, 45));
+        //        hora.desenvolvedor = devs[rnd.Next(1, devs.Count - 1)]; //devs.First(e => e.Id.Equals(rnd.Next(1, devs.Count-1)));
 
-                var hora = new Hora_trabalhada();
-                hora.Datainicio = oDate;
-                hora.Datafim = oDate.AddHours(rnd.Next(5, 8)).AddMinutes(rnd.Next(10, 45));
-                hora.desenvolvedor = devs[rnd.Next(1, devs.Count - 1)]; //devs.First(e => e.Id.Equals(rnd.Next(1, devs.Count-1)));
-
-                //await Task.Delay((int)TimeSpan.FromSeconds(3).TotalMilliseconds);
-                
-                await HR.SalvarRegistroAsync(hora);
-                //await Task.Delay((int)TimeSpan.FromSeconds(3).TotalMilliseconds);
-            }
-        }
+        //        await HR.SalvarRegistroAsync(hora);
+        //    }
+        //}
     }
 }

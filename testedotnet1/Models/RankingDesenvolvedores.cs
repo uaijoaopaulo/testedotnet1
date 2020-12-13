@@ -64,10 +64,10 @@ namespace testedotnet1.Models
             {
                 foreach (var registro in ListaHoras)
                 {
-                    var horas = registro.Datainicio.Subtract(registro.Datafim);
-                    ListaDev[registro.desenvolvedor.Id].HorasTrabalhadas += horas.TotalHours;
+                    var horas = registro.Datafim.Subtract(registro.Datainicio);
+                    ListaDev[registro.desenvolvedorId].HorasTrabalhadas += horas.TotalHours;
                 }
-                return ListaDev.Take(5).ToList();
+                return ListaDev.OrderByDescending(e => e.HorasTrabalhadas).Take(5).ToList();
             }
             catch (Exception)
             {

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using testedotnet1.Data;
 
 namespace testedotnet1.Migrations
 {
     [DbContext(typeof(RegistroContext))]
-    partial class RegistroContextModelSnapshot : ModelSnapshot
+    [Migration("20201213040516_alteracao")]
+    partial class alteracao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
