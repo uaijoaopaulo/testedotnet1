@@ -36,5 +36,7 @@ Desenvolver um serviço que seja capaz de gerar um lançamento de horas.
 - Criar um client WEB para consumir essa API 
 
 #### Identificação:
-Nome: <br/>
-E-mail: 
+Nome: João Paulo Bráulio Caixeta <br/>
+E-mail: jpbraulio@live.com
+
+Desde já agradeço possibilidade de fazer esse teste.
