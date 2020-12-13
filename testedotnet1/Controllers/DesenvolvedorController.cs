@@ -24,7 +24,7 @@ namespace testedotnet1.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetDev()
+        public IActionResult GetDevs()
         {
             var dev = DR.GetDevs();
             if (dev == null)
@@ -35,28 +35,40 @@ namespace testedotnet1.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateDevAsync([FromBody] Desenvolvedor value)
         {
-            var dev = await DR.SalvarDevAsync(value);
-            if (dev == null)
-                return BadRequest();
-            return Ok(dev);
+            if (ModelState.IsValid)
+            {
+                var dev = await DR.SalvarDevAsync(value);
+                if (dev == null)
+                    return BadRequest();
+                return Ok(dev);
+            }
+            return BadRequest();
         }
 
         [HttpPut]
         public async Task<IActionResult> AtualizarDev([FromBody] Desenvolvedor value)
         {
-            var dev = await DR.SalvarDevAsync(value);
-            if (dev == null)
-                return BadRequest();
-            return Ok(dev);
+            if (ModelState.IsValid)
+            {
+                var dev = await DR.SalvarDevAsync(value);
+                if (dev == null)
+                    return BadRequest();
+                return Ok(dev);
+            }
+            return BadRequest();
         }
 
         [HttpDelete]
         public async Task<IActionResult> ExcluirDev([FromBody] Desenvolvedor value)
         {
-            var dev = await DR.ExcluirDevAsync(value.Id);
-            if (dev == null)
-                return BadRequest();
-            return Ok(dev);
+            if (ModelState.IsValid)
+            {
+                var dev = await DR.ExcluirDevAsync(value.Id);
+                if (dev == null)
+                    return NoContent();
+                return Ok(dev);
+            }
+            return BadRequest();
         }
 
 

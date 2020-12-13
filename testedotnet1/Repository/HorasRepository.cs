@@ -63,15 +63,15 @@ namespace testedotnet1.Repository
         public async Task<Hora_trabalhada> SalvarRegistroAsync(Hora_trabalhada value)
         {
             var HorasConflitantes = DataModel.Horas_Trabalhadas.Where
-                (e => e.desenvolvedor.Id.Equals(value.desenvolvedor.Id) 
+                (e => e.desenvolvedorId.Equals(value.desenvolvedorId) 
             && e.Datainicio.Year.Equals(value.Datainicio.Year)
             && e.Datainicio.Month.Equals(value.Datainicio.Month) 
             && e.Datainicio.Day.Equals(value.Datainicio.Day)).ToList();
-            if(HorasConflitantes != null)
+            if(HorasConflitantes.Count != 0)
                 foreach (var Hora in HorasConflitantes)
                 {
-                    if (Hora.Datainicio.Hour >= value.Datainicio.Hour
-                    && Hora.Datafim.Hour <= value.Datafim.Hour)
+                    if (Hora.Datainicio.Hour <= value.Datainicio.Hour
+                    || Hora.Datafim.Hour >= value.Datafim.Hour)
                     return null;
                 }
             try

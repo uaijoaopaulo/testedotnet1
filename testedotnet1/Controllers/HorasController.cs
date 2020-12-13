@@ -42,87 +42,42 @@ namespace testedotnet1.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateHoraAsync(/*[FromBody] Hora_trabalhada value*/)
+        public async Task<IActionResult> CreateHoraAsync([FromBody] Hora_trabalhada value)
         {
-            var hora = 0;
-            if (hora == null)
-                return BadRequest();
-            return Ok(hora);
+            if (ModelState.IsValid)
+            {
+                var hora = await HR.SalvarRegistroAsync(value);
+                if (hora == null)
+                    return BadRequest();
+                return Ok(hora);
+            }
+            return BadRequest();
         }
 
         [HttpPut]
         public async Task<IActionResult> AtualizarHora([FromBody] Hora_trabalhada value)
         {
-            return null;
+            if (ModelState.IsValid)
+            {
+                var hora = await HR.SalvarRegistroAsync(value);
+                if (hora == null)
+                    return BadRequest();
+                return Ok(hora);
+            }
+            return BadRequest();
         }
 
         [HttpDelete]
         public async Task<IActionResult> ExcluirHora([FromBody] Hora_trabalhada value)
         {
-            return null;
+            if (ModelState.IsValid)
+            {
+                var hora = await HR.ExcluirRegistroAsync(value.Id);
+                if (hora == null)
+                    return NoContent();
+                return Ok(hora);
+            }
+            return BadRequest();
         }
-
-
-        //[HttpGet]
-        //public IActionResult ListaDeLivros()
-        //{
-        //    var lista = _repo.All.Select(l => l.ToModel()).ToList();
-        //    return Ok(lista);
-        //}
-
-        //[HttpGet("{id}")]
-        //public IActionResult Recuperar(int id)
-        //{
-        //    var model = _repo.Find(id);
-        //    if (model == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return Ok(model.ToModel());
-        //}
-
-        //[HttpPost]
-        //public IActionResult Incluir([FromBody] LivroUpload model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var livro = model.ToLivro();
-        //        _repo.Incluir(livro);
-        //        var uri = Url.Action("Recuperar", new { id = livro.Id });
-        //        return Created(uri, livro); //201
-        //    }
-        //    return BadRequest();
-        //}
-
-        //[HttpPut]
-        //public IActionResult Alterar([FromBody] LivroUpload model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var livro = model.ToLivro();
-        //        if (model.Capa == null)
-        //        {
-        //            livro.ImagemCapa = _repo.All
-        //                .Where(l => l.Id == livro.Id)
-        //                .Select(l => l.ImagemCapa)
-        //                .FirstOrDefault();
-        //        }
-        //        _repo.Alterar(livro);
-        //        return Ok(); //200
-        //    }
-        //    return BadRequest();
-        //}
-
-        //[HttpDelete("{id}")]
-        //public IActionResult Remover(int id)
-        //{
-        //    var model = _repo.Find(id);
-        //    if (model == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    _repo.Excluir(model);
-        //    return NoContent(); //203
-        //}
     }
 }
